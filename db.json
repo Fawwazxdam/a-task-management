@@ -1,0 +1,42 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Belajar React",
+      "description": "Pelajari dasar-dasar React untuk membangun aplikasi web",
+      "status": "pending"
+    },
+    {
+      "id": "2",
+      "title": "Setup Project",
+      "description": "Setup proyek task management dengan Vite dan TypeScript",
+      "status": "on_progress"
+    },
+    {
+      "id": "3",
+      "title": "Implementasi CRUD",
+      "description": "Implementasi fitur Create, Read, Update, Delete untuk tasks",
+      "status": "completed"
+    },
+    {
+      "id": "b6cc",
+      "title": "Memasak Kue",
+      "description": "Beli Bahan2 dulu tepung, telur, gula dll",
+      "status": "pending"
+    }
+  ],
+  "users": [
+    {
+      "id": "1766125075004",
+      "email": "a@a.a",
+      "name": "Adam",
+      "password": "password"
+    },
+    {
+      "id": "1766125121560",
+      "email": "admin@example.com",
+      "name": "Admin",
+      "password": "password"
+    }
+  ]
+}
