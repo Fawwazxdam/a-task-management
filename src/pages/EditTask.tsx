@@ -22,7 +22,7 @@ const EditTask: React.FC = () => {
       if (!id) return;
 
       try {
-        const response = await taskApi.getById(Number(id));
+        const response = await taskApi.getById(id);
         const task = response.data;
         setFormData({
           title: task.title,
@@ -47,7 +47,7 @@ const EditTask: React.FC = () => {
     setLoading(true);
 
     try {
-      await taskApi.update(Number(id), formData);
+      await taskApi.update(id, formData);
       navigate('/dashboard');
     } catch (error) {
       console.error('Error updating task:', error);

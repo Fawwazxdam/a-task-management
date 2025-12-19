@@ -12,11 +12,11 @@ export const api = axios.create({
 // Task API
 export const taskApi = {
   getAll: () => api.get('/tasks'),
-  getById: (id: number) => api.get(`/tasks/${id}`),
+  getById: (id: string) => api.get(`/tasks/${id}`),
   create: (data: any) => api.post('/tasks', data),
-  update: (id: number, data: any) => api.put(`/tasks/${id}`, data),
-  patch: (id: number, data: any) => api.patch(`/tasks/${id}`, data),
-  delete: (id: number) => api.delete(`/tasks/${id}`),
+  update: (id: string, data: any) => api.put(`/tasks/${id}`, data),
+  patch: (id: string, data: any) => api.patch(`/tasks/${id}`, data),
+  delete: (id: string) => api.delete(`/tasks/${id}`),
 };
 
 // User API

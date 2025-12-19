@@ -13,15 +13,15 @@
       "status": "on_progress"
     },
     {
-      "id": "3",
       "title": "Implementasi CRUD",
-      "description": "Implementasi fitur Create, Read, Update, Delete untuk tasks",
-      "status": "completed"
+      "description": "Implementasi fitur Create, Read, Update, Delete untuk tasks dan lainnya",
+      "status": "completed",
+      "id": "3"
     },
     {
-      "id": "b6cc",
-      "title": "Memasak Kue",
-      "description": "Beli Bahan2 dulu tepung, telur, gula dll",
+      "id": "0478",
+      "title": "Membuat Kopi",
+      "description": "Memilih Biji kopi, meroasting kopi, menggiling kopi, menyeduh kopi, jadi",
       "status": "pending"
     }
   ],

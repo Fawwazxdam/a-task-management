@@ -4,8 +4,8 @@ import type { Task } from '../types/index';
 
 interface TaskListProps {
   tasks: Task[];
-  onDelete: (id: number) => void;
-  onChangeStatus: (id: number, status: Task['status']) => void;
+  onDelete: (id: string) => void;
+  onChangeStatus: (id: string, status: Task['status']) => void;
   isDarkMode?: boolean;
 }
 

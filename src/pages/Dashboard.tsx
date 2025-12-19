@@ -31,7 +31,7 @@ const Dashboard: React.FC = () => {
     }
   };
 
-  const deleteTask = async (id: number) => {
+  const deleteTask = async (id: string) => {
     try {
       await taskApi.delete(id);
       setTasks(tasks.filter(task => task.id !== id));
@@ -40,7 +40,7 @@ const Dashboard: React.FC = () => {
     }
   };
 
-  const changeStatus = async (id: number, status: Task['status']) => {
+  const changeStatus = async (id: string, status: Task['status']) => {
     try {
       const response = await taskApi.patch(id, { status });
       setTasks(tasks.map(t => t.id === id ? response.data : t));

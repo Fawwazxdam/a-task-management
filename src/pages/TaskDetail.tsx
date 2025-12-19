@@ -18,7 +18,7 @@ const TaskDetail: React.FC = () => {
       if (!id) return;
 
       try {
-        const response = await taskApi.getById(Number(id));
+        const response = await taskApi.getById(id);
         setTask(response.data);
       } catch (error) {
         console.error('Error fetching task:', error);
