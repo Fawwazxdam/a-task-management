@@ -13,52 +13,60 @@ Aplikasi manajemen tugas modern dan responsif yang dibangun dengan React, TypeSc
 - **Pembaruan Real-time**: Pembaruan UI instan dengan pembaruan optimis
 - **Validasi Form**: Validasi sisi klien dengan penanganan error
 
-## 🛠️ Tech Stack
+## 🛠️ Teknologi yang Digunakan
 
 - **Frontend**: React 19, TypeScript, Vite
 - **Styling**: Tailwind CSS
-- **State Management**: Zustand
+- **Manajemen State**: Zustand
 - **Routing**: React Router DOM
 - **HTTP Client**: Axios
-- **Icons**: Lucide React
-- **Backend**: JSON Server (for development)
-- **Form Handling**: React Hook Form
+- **Ikon**: Lucide React
+- **Backend**: JSON Server (untuk development)
+- **Penanganan Form**: React Hook Form
 
-## 📋 Prerequisites
+## 📋 Prasyarat
 
-- Node.js (v16 or higher)
-- npm or yarn
+- Node.js (versi 16 atau lebih tinggi)
+- npm atau yarn
 
-## 🚀 Installation & Setup
+## 🚀 Instalasi & Setup
 
-1. **Clone the repository**
+1. **Clone repositori**
    ```bash
    git clone <repository-url>
    cd a-task-management
    ```
 
-2. **Install dependencies**
+2. **Install dependensi**
    ```bash
    npm install
    ```
 
-3. **Environment Configuration**
-   Create a `.env` file in the root directory:
+3. **Konfigurasi Environment**
+   Buat file `.env` di direktori root:
    ```env
    VITE_API_BASE_URL=http://localhost:3005
    ```
 
-4. **Start the JSON Server (Backend)**
+4. **Jalankan JSON Server (Backend)**
    ```bash
    npm run server
    ```
-   This starts the mock API server on port 3005.
+   Ini akan menjalankan server API mock di port 3005.
 
-5. **Start the Development Server**
+5. **Jalankan Server Development**
    ```bash
    npm run dev
    ```
-   The app will be available at `http://localhost:5173`
+   Aplikasi akan tersedia di `http://localhost:5173`
+
+### Akun Default untuk Testing
+
+Untuk memudahkan testing, gunakan akun default berikut:
+- **Email**: admin@example.com
+- **Password**: password
+
+Atau Anda dapat mendaftar akun baru melalui halaman registrasi.
 
 ## 📖 Penggunaan
 
@@ -81,81 +89,81 @@ Aplikasi manajemen tugas modern dan responsif yang dibangun dengan React, TypeSc
 - Beralih mode gelap/terang menggunakan ikon bulan/matahari di navigasi atas
 - Preferensi tema disimpan dan bertahan di seluruh sesi
 
-## 📁 Project Structure
+## 📁 Struktur Proyek
 
 ```
 src/
-├── components/         # Reusable React components
-│   ├── Task.tsx        # Individual task component
-│   ├── TaskList.tsx    # Task list container
-│   ├── ProtectedRoute.tsx # Route protection wrapper
-│   └── TaskForm.tsx    # Task form component (if exists)
-├── pages/              # Page components (routes)
-│   ├── Dashboard.tsx   # Main dashboard with task list
-│   ├── Login.tsx       # User login page
-│   ├── Register.tsx    # User registration page
-│   ├── AddTask.tsx     # Task creation page
-│   ├── EditTask.tsx    # Task editing page
-│   └── TaskDetail.tsx  # Task details page
-├── routes/             # Routing configuration
-│   └── index.tsx       # App routes definition
-├── services/           # API services
-│   └── api.ts          # Axios API client and endpoints
-├── stores/             # State management (Zustand)
-│   ├── authStore.ts    # Authentication state
-│   └── themeStore.ts   # Theme state
-├── types/              # TypeScript type definitions
-│   └── index.ts        # Type definitions
-├── App.tsx             # Main app component
-└── main.tsx            # App entry point
+├── components/         # Komponen React yang dapat digunakan ulang
+│   ├── Task.tsx        # Komponen tugas individual
+│   ├── TaskList.tsx    # Container daftar tugas
+│   ├── ProtectedRoute.tsx # Wrapper perlindungan rute
+│   └── TaskForm.tsx    # Komponen form tugas (jika ada)
+├── pages/              # Komponen halaman (routes)
+│   ├── Dashboard.tsx   # Dashboard utama dengan daftar tugas
+│   ├── Login.tsx       # Halaman login pengguna
+│   ├── Register.tsx    # Halaman registrasi pengguna
+│   ├── AddTask.tsx     # Halaman pembuatan tugas
+│   ├── EditTask.tsx    # Halaman edit tugas
+│   └── TaskDetail.tsx  # Halaman detail tugas
+├── routes/             # Konfigurasi routing
+│   └── index.tsx       # Definisi rute aplikasi
+├── services/           # Layanan API
+│   └── api.ts          # Klien Axios dan endpoint API
+├── stores/             # Manajemen state (Zustand)
+│   ├── authStore.ts    # State autentikasi
+│   └── themeStore.ts   # State tema
+├── types/              # Definisi tipe TypeScript
+│   └── index.ts        # Definisi tipe
+├── App.tsx             # Komponen aplikasi utama
+└── main.tsx            # Titik masuk aplikasi
 ```
 
-## 🔧 API Endpoints
+## 🔧 Endpoint API
 
-The app uses JSON Server for mock API endpoints. All API calls are abstracted through `src/services/api.ts`.
+Aplikasi menggunakan JSON Server untuk endpoint API mock. Semua panggilan API diabstraksikan melalui `src/services/api.ts`.
 
-### Tasks
-- `GET /tasks` - Get all tasks
-- `GET /tasks/:id` - Get task by ID
-- `POST /tasks` - Create new task
-- `PUT /tasks/:id` - Update task
-- `PATCH /tasks/:id` - Partial update task
-- `DELETE /tasks/:id` - Delete task
+### Tugas
+- `GET /tasks` - Mendapatkan semua tugas
+- `GET /tasks/:id` - Mendapatkan tugas berdasarkan ID
+- `POST /tasks` - Membuat tugas baru
+- `PUT /tasks/:id` - Memperbarui tugas
+- `PATCH /tasks/:id` - Memperbarui sebagian tugas
+- `DELETE /tasks/:id` - Menghapus tugas
 
-### Users
-- `GET /users` - Get all users
-- `POST /users` - Create new user
+### Pengguna
+- `GET /users` - Mendapatkan semua pengguna
+- `POST /users` - Membuat pengguna baru
 
-## 🏗️ Code Documentation
+## 🏗️ Dokumentasi Kode
 
-### Architecture
+### Arsitektur
 
-The application follows a component-based architecture with:
+Aplikasi mengikuti arsitektur berbasis komponen dengan:
 
-- **Separation of Concerns**: Components handle UI, stores manage state
-- **Type Safety**: Full TypeScript coverage with strict typing
-- **State Management**: Zustand for predictable state updates
-- **Routing**: Protected routes with authentication checks
+- **Pemisahan Perhatian**: Komponen menangani UI, store mengelola state
+- **Keamanan Tipe**: Cakupan TypeScript penuh dengan typing yang ketat
+- **Manajemen State**: Zustand untuk pembaruan state yang dapat diprediksi
+- **Routing**: Rute yang dilindungi dengan pemeriksaan autentikasi
 
-### Key Components
+### Komponen Utama
 
-#### Authentication Flow
-- `authStore.ts`: Manages user authentication state
-- `ProtectedRoute.tsx`: Guards routes requiring authentication
-- Login/Register components handle user authentication
+#### Alur Autentikasi
+- `authStore.ts`: Mengelola state autentikasi pengguna
+- `ProtectedRoute.tsx`: Melindungi rute yang memerlukan autentikasi
+- Komponen Login/Register menangani autentikasi pengguna
 
-#### Task Management
-- `Dashboard.tsx`: Main task overview and controls
-- `TaskList.tsx`: Renders filtered task list
-- `Task.tsx`: Individual task item with actions
-- `AddTask.tsx` / `EditTask.tsx`: Task CRUD forms
-- `TaskDetail.tsx`: Detailed task view with status management
+#### Manajemen Tugas
+- `Dashboard.tsx`: Ringkasan dan kontrol tugas utama
+- `TaskList.tsx`: Merender daftar tugas yang difilter
+- `Task.tsx`: Item tugas individual dengan aksi
+- `AddTask.tsx` / `EditTask.tsx`: Form CRUD tugas
+- `TaskDetail.tsx`: Tampilan detail tugas dengan manajemen status
 
-#### Theme System
-- `themeStore.ts`: Global theme state management
-- All components support dark/light mode with conditional styling
+#### Sistem Tema
+- `themeStore.ts`: Manajemen state tema global
+- Semua komponen mendukung mode gelap/terang dengan styling kondisional
 
-### State Management
+### Manajemen State
 
 #### Auth Store
 ```typescript
@@ -176,77 +184,77 @@ interface ThemeState {
 }
 ```
 
-### Styling Guidelines
+### Panduan Styling
 
-- **Tailwind CSS**: Utility-first CSS framework
-- **Dark Mode**: Conditional classes based on `isDarkMode` state
-- **Responsive**: Mobile-first approach with `sm:`, `md:`, `lg:` breakpoints
-- **Accessibility**: Proper contrast ratios and focus states
+- **Tailwind CSS**: Framework CSS utility-first
+- **Dark Mode**: Kelas kondisional berdasarkan state `isDarkMode`
+- **Responsif**: Pendekatan mobile-first dengan breakpoint `sm:`, `md:`, `lg:`
+- **Aksesibilitas**: Rasio kontras yang tepat dan state focus
 
-### Development Guidelines
+### Panduan Development
 
-1. **Component Structure**:
-   - Use functional components with hooks
-   - Maintain consistent prop interfaces
-   - Implement proper error handling
+1. **Struktur Komponen**:
+   - Gunakan komponen fungsional dengan hooks
+   - Pertahankan interface prop yang konsisten
+   - Implementasikan penanganan error yang tepat
 
-2. **State Management**:
-   - Use Zustand stores for global state
-   - Keep components stateless when possible
-   - Handle loading and error states
+2. **Manajemen State**:
+   - Gunakan store Zustand untuk state global
+   - Jaga komponen agar stateless jika memungkinkan
+   - Tangani state loading dan error
 
-3. **API Integration**:
-   - Use Axios for HTTP requests
-   - Implement proper error handling
-   - Follow RESTful conventions
+3. **Integrasi API**:
+   - Gunakan Axios untuk request HTTP
+   - Implementasikan penanganan error yang tepat
+   - Ikuti konvensi RESTful
 
 4. **TypeScript**:
-   - Use strict typing
-   - Define interfaces for all data structures
-   - Avoid `any` type usage
+   - Gunakan typing yang ketat
+   - Definisikan interface untuk semua struktur data
+   - Hindari penggunaan tipe `any`
 
 ## 🧪 Testing
 
 ```bash
-# Run tests
+# Jalankan test
 npm run test
 
-# Run linting
+# Jalankan linting
 npm run lint
 
-# Build for production
+# Build untuk production
 npm run build
 ```
 
 ## 🚀 Deployment
 
-1. **Build the app**
+1. **Build aplikasi**
    ```bash
    npm run build
    ```
 
-2. **Serve the dist folder** using any static server
+2. **Serve folder dist** menggunakan server statis apa pun
 
-3. **Environment Variables**: Update `.env` for production API URLs
+3. **Variabel Environment**: Update `.env` untuk URL API production
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. Fork repositori
+2. Buat branch fitur (`git checkout -b feature/fitur-hebat`)
+3. Commit perubahan Anda (`git commit -m 'Tambah fitur hebat'`)
+4. Push ke branch (`git push origin feature/fitur-hebat`)
+5. Buka Pull Request
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Proyek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detail.
 
-## 👥 Authors
+## 👥 Penulis
 
-- **Developer** - Initial work
+- **Developer** - Pekerjaan awal
 
-## 🙏 Acknowledgments
+## 🙏 Ucapan Terima Kasih
 
-- React Team for the amazing framework
-- Tailwind CSS for the utility-first CSS framework
-- JSON Server for the mock API functionality
+- Tim React untuk framework yang amazing
+- Tailwind CSS untuk framework CSS utility-first
+- JSON Server untuk fungsionalitas API mock
